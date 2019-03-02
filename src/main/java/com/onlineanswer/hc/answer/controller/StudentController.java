@@ -81,7 +81,7 @@ public class StudentController {
                         .eq("login", student.getLogin())
                         .eq("pwd", student.getPwd()));
     }
-    //修改密码
+    //修改密码的，随便加个注释
     @PostMapping("/updataPwd")
     public String updateStudentByname(Student student, HttpServletResponse response) {
         response.setHeader("Access-Control-Allow-Origin", "*");
