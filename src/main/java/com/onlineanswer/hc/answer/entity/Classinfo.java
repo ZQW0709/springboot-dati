@@ -13,14 +13,14 @@ import java.util.Date;
  * @email zyl52570@163.com
  * @date 2019-01-10 09:29:07
  */
-@TableName("classinfo")
+@TableName("classinfo")    //@TableName注解是为了指定此实体类对应数据库的哪一张表；
 public class Classinfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
      *
      */
-    @TableId
+    @TableId   //@TableId指定的是主键
     private Integer id;
     /**
      * 所属校区ID
@@ -29,7 +29,7 @@ public class Classinfo implements Serializable {
     /**
      * 校区名称
      */
-    @TableField(exist = false) //表示该列不是表中的字段
+    @TableField(exist = false) //表示该列不是表中的字段  @TableFiled,此注解主要用在非主键实体属性上
     private String campusname;
     /**
      * 名称

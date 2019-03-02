@@ -30,7 +30,7 @@ public class PostmanageController {
     public R getPostmanageList(@RequestParam Map<String, Object> map, HttpServletResponse response) {
         response.setHeader("Access-Control-Allow-Origin", "*");
         PageUtils pu = postmanageService.getPostmanageList(map);
-        log.info("数据是", pu.getList());
+//        log.info("数据是", pu.getList());
         return new R(0, "success", pu.getTotalCount(), pu.getList());
     }
 

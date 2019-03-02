@@ -35,6 +35,7 @@ spring:
     jackson:
       date-format: yyyy-MM-dd HH:mm:ss
       time-zone: GMT+8
+#   官方提供了基于springboot的配置
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   global-config:

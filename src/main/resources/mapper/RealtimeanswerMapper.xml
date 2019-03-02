@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onlineanswer.hc.answer.mapper.RealtimeanswerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.onlineanswer.hc.answer.entity.Realtimeanswer">
+        <id column="id" property="id" />
+        <result column="studentid" property="studentid" />
+        <result column="examtypeid" property="examtypeid" />
+        <result column="examinfoid" property="examinfoid" />
+        <result column="examtypename" property="examtypename" />
+        <result column="examtypeinfo" property="examtypeinfo" />
+        <result column="studentname" property="studentname" />
+        <result column="studentanswer" property="studentanswer" />
+        <result column="correctanswer" property="correctanswer" />
+        <result column="istrue" property="istrue" />
+        <result column="studentlogin" property="studentlogin" />
+    </resultMap>
+
+</mapper>
