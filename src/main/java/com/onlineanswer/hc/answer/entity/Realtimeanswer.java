@@ -1,5 +1,6 @@
 package com.onlineanswer.hc.answer.entity;
 
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import java.io.Serializable;
@@ -12,6 +13,8 @@ import java.io.Serializable;
  * @author zqw
  * @since 2019-03-02
  */
+
+@TableName("realtimeanswer")    //@TableName注解是为了指定此实体类对应数据库的哪一张表；
 public class Realtimeanswer implements Serializable {
 
     private static final long serialVersionUID = 1L;

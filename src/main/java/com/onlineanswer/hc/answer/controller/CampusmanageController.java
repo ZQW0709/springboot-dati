@@ -30,7 +30,6 @@ public class CampusmanageController {
         }
     }
     //修改
-
     @PostMapping("/updateCampusmanage")
     public String updateCampusmanage(Campusmanage campusmanage, HttpServletResponse response) {
 
