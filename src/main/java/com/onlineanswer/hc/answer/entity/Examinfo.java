@@ -27,6 +27,18 @@ public class Examinfo implements Serializable {
     private Integer examtypeid;
     @TableField(exist = false)
     private String examtypename;
+
+    @TableField(exist = false)
+    private Integer examtypestatus;
+
+    public Integer getExamtypestatus() {
+        return examtypestatus;
+    }
+
+    public void setExamtypestatus(Integer examtypestatus) {
+        this.examtypestatus = examtypestatus;
+    }
+
     /**
      * 名称
      */

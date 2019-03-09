@@ -17,7 +17,8 @@
         ei.correctanswer,
         ei.explaininfo,
         ei.createtime,
-        et.name as examtypename
+        et.name as examtypename,
+        et.status as examtypestatus
         from
         examinfo ei inner join examtype et on ei.examtypeid=et.id
         where 1=1
@@ -26,6 +27,9 @@
         </if>
         <if test="name != null and name != ''">
             AND ei.name LIKE CONCAT('%',#{name},'%')
+        </if>
+        <if test="examtypestatus != null and examtypestatus != ''">
+            AND et.status LIKE CONCAT('%',#{examtypestatus},'%')
         </if>
     </select>
 
