@@ -12,6 +12,7 @@
         s.studentid,
         s.grade,
         s.createtime,
+        s.stuname,
         e.name as examinfoname
         from
         studentsanswer s INNER JOIN examtype e on s.examtypeid=e.id
@@ -21,6 +22,9 @@
         </if>
         <if test="studentid != null and studentid != ''">
             AND s.studentid = #{studentid}
+        </if>
+        <if test="stuname != null and stuname != ''">
+            AND s.stuname = #{stuname}
         </if>
         order by createtime desc
     </select>

@@ -11,6 +11,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,10 +53,10 @@ public class UploadController {
 
         List<Examinfo> list = new ArrayList<Examinfo>();       //正常可插入数据
         List<Examinfo> repeatList = new ArrayList<Examinfo>();
-        ; //数据库中重复数据
+         //数据库中重复数据
         try {
-            InputStream is = file.getInputStream();
-            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(is);
+//            InputStream is = file.getInputStream();
+            HSSFWorkbook hssfWorkbook = new HSSFWorkbook(new POIFSFileSystem(file.getInputStream()));
             Examinfo examinfo = null;
 
             // 循环工作表Sheet

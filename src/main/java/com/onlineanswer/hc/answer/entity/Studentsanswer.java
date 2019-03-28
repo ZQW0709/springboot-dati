@@ -30,6 +30,17 @@ public class Studentsanswer implements Serializable {
 
     @TableField(exist = false)
     private String examinfoname;
+
+    private String stuname;
+
+    public String getStuname() {
+        return stuname;
+    }
+
+    public void setStuname(String stuname) {
+        this.stuname = stuname;
+    }
+
     /**
      * 成绩
      */

@@ -28,15 +28,24 @@ public class RealtimeanswerServiceImpl extends ServiceImpl<RealtimeanswerMapper,
 
     @Override
     public PageUtils getCampusmanageList(Map<String, Object> params) {
-//        String name = "";
-//        try {
-//            name = params.get("name").toString();
-//        } catch (Exception ex) {
-//            name = "";
-//        }
+        String name = "";
+        String examtypeinfo = "";
+        try {
+            name = params.get("studentname").toString();
+        } catch (Exception ex) {
+            name = "";
+
+        }
+        try {
+            examtypeinfo = params.get("examtypeinfo").toString();
+        } catch (Exception ex) {
+            examtypeinfo = "";
+        }
         Page<Realtimeanswer> page = this.selectPage(
-                new Query<Realtimeanswer>(params).getPage()
-//                new EntityWrapper<Realtimeanswer>().like("name", name)
+                new Query<Realtimeanswer>(params).getPage(),
+                new EntityWrapper<Realtimeanswer>()
+                        .like("studentname", name)
+                        .like("examtypeinfo",examtypeinfo)
         );
         return new PageUtils(page);
     }

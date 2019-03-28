@@ -15,8 +15,6 @@
         <result column="correctanswer" property="correctanswer" />
         <result column="istrue" property="istrue" />
         <result column="studentlogin" property="studentlogin" />
-
-
     </resultMap>
 
 
